@@ -1,20 +1,10 @@
-<?php
-    $homeSliderList = [
-        'bestsale' => ['Top bán chạy'],
-        'Tivi' => ['Ti vi'],
-        'dienlanh' => ['Điện lạnh nổi bật'],
-        'maylocnuoc' => ['Máy lọc nước'],
-        'giadung' => ['Điện gia dụng nổi bật'],
-        'mobile' => ['Điện thoại, tablet'],
-     ]
-?>
 <div class="home-slider-wrapper">
     <div class="site-w">
-        <?php foreach ($homeSliderList as $key => $value) { ?>
+        <?php foreach ($homeCategories as $value) { ?>
             <div class="home-slider-content-box">
                 <div class="home-slider-tabs flex-b align-c">
                     <h2 class="home-slider-tab-heading">
-                        <?= $value[0] ?>
+                        {{ $value->title }}
                     </h2>
                     <div class="home-slider-tab-list flex-b align-c">
                         <div class="home-slider-tab-item"><a class="home-slider-tab-link" href="#">Nổi bật</a></div>
