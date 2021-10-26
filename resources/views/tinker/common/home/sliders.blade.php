@@ -88,7 +88,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                <?php include 'common/home/show-info.php'; ?>
+                                @include('common/home/show-info')
                             </div>
                         <?php } ?>
                     </div>
