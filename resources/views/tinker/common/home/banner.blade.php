@@ -7,9 +7,9 @@
                     <?php for ($i=1; $i < 5; $i++) { ?>
                         <a href="#" class="main-banner-item swiper-slide">
                             <picture>
-                                <source media="(min-width: 320px)" srcset="/images/banner/<?= $i?>.jpg">
-                                <source src="/images/blank.gif">
-                                <img src="/images/blank.gif" alt="">
+                                <source media="(min-width: 320px)" srcset="/themes/tinker/images/banner/<?= $i?>.jpg">
+                                <source src="/themes/tinker/images/blank.gif">
+                                <img src="/themes/tinker/images/blank.gif" alt="">
                             </picture>
                         </a>
                     <?php } ?>
@@ -22,18 +22,18 @@
                 <div class="small-banner-item">
                     <a href="#">
                         <picture>
-                            <source media="(min-width: 320px)" srcset="/images/banner/s1.png">
-                            <source src="/images/blank.gif">
-                            <img src="/images/blank.gif" alt="">
+                            <source media="(min-width: 320px)" srcset="/themes/tinker/images/banner/s1.png">
+                            <source src="/themes/tinker/images/blank.gif">
+                            <img src="/themes/tinker/images/blank.gif" alt="">
                         </picture>
                     </a>
                 </div>
                 <div class="small-banner-item">
                     <a href="#">
                         <picture>
-                            <source media="(min-width: 320px)" srcset="/images/banner/s2.png">
-                            <source src="/images/blank.gif">
-                            <img src="/images/blank.gif" alt="">
+                            <source media="(min-width: 320px)" srcset="/themes/tinker/images/banner/s2.png">
+                            <source src="/themes/tinker/images/blank.gif">
+                            <img src="/themes/tinker/images/blank.gif" alt="">
                         </picture>
                     </a>
                 </div>
@@ -44,7 +44,7 @@
         <?php for ($i=1; $i < 4; $i++) { ?>
             <div class="bottom-banner-item">
                 <a href="#">
-                    <img src="/images/banner/<?= $i?>.jpg" alt="">
+                    <img src="/themes/tinker/images/banner/<?= $i?>.jpg" alt="">
                 </a>
             </div>
         <?php } ?>

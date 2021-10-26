@@ -5,3 +5,6 @@
     @include('common.home.news')
     @include('common.recommendation')
 @endsection
+@section('js')
+    <link rel="stylesheet" href="/themes/tinker/assets/css/home.css">
+@endsection

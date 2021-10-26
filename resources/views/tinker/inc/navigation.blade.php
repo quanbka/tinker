@@ -4,8 +4,8 @@
             <a href="/">
                 <picture>
                     <source media="(min-width: 320px)" srcset="/themes/tinker/images/logo.svg">
-                    <source src="/images/blank.gif">
-                    <img src="/images/blank.gif" alt="Electic - Thiết bị điện tử, điện lạnh">
+                    <source src="/themes/tinker/images/blank.gif">
+                    <img src="/themes/tinker/images/blank.gif" alt="Electic - Thiết bị điện tử, điện lạnh">
                 </picture>
             </a>
         </li>

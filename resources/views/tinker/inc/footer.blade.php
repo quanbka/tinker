@@ -43,28 +43,28 @@
             <div class="footer-block">
                 <h4 class="footer-title">Phương thức thanh toán</h4 class="footer-title">
                 <p class="payment-method-wrapper">
-                    <img class="icon" src="/images/payments/visa.svg" width="54" alt="">
-                    <img class="icon" src="/images/payments/mastercard.svg" width="54" alt="">
-                    <img class="icon" src="/images/payments/jcb.svg" width="54" alt="">
-                    <img class="icon" src="/images/payments/cash.svg" width="54" alt="">
-                    <img class="icon" src="/images/payments/internet-banking.svg" width="54" alt="">
-                    <img class="icon" src="/images/payments/installment.svg" width="54" alt="">
+                    <img class="icon" src="/themes/tinker/images/payments/visa.svg" width="54" alt="">
+                    <img class="icon" src="/themes/tinker/images/payments/mastercard.svg" width="54" alt="">
+                    <img class="icon" src="/themes/tinker/images/payments/jcb.svg" width="54" alt="">
+                    <img class="icon" src="/themes/tinker/images/payments/cash.svg" width="54" alt="">
+                    <img class="icon" src="/themes/tinker/images/payments/internet-banking.svg" width="54" alt="">
+                    <img class="icon" src="/themes/tinker/images/payments/installment.svg" width="54" alt="">
                 </p>
             </div>
             <div class="footer-block">
                 <h4 class="footer-title">Kết nối với chúng tôi</h4 class="footer-title">
                 <div class="social-wrapper flex-b">
                     <a rel="noreferrer" href="https://www.facebook.com/" class="icon" target="_blank" title="Facebook">
-                        <img src="/images/social/facebook.svg" height="32" alt="">
+                        <img src="/themes/tinker/images/social/facebook.svg" height="32" alt="">
                     </a>
                     <a rel="noreferrer" href="https://www.youtube.com/" class="icon" target="_blank" title="Youtube">
-                        <img src="/images/social/youtube.svg" height="32" alt="">
+                        <img src="/themes/tinker/images/social/youtube.svg" height="32" alt="">
                     </a>
                     <a rel="noreferrer" href="http://zalo.me/" class="icon" target="_blank" title="Zalo">
-                        <img src="/images/social/zalo.svg" height="32" alt="">
+                        <img src="/themes/tinker/images/social/zalo.svg" height="32" alt="">
                     </a>
                     <a rel="noreferrer" href="http://TikTok.com/" class="icon" target="_blank" title="Zalo">
-                        <img src="/images/social/tiktok.svg" height="32" alt="">
+                        <img src="/themes/tinker/images/social/tiktok.svg" height="32" alt="">
                     </a>
                 </div>
             </div>

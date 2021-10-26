@@ -9,7 +9,7 @@
                     <div class="home-slider-item swiper-slide">
                     <div class="home-show-image">
                         <a href="#">
-                            <img src="/images/products/<?= $i ?>.jpg" alt="">
+                            <img src="/themes/tinker/images/products/<?= $i ?>.jpg" alt="">
                         </a>
                     </div>
                     <div class="home-slider-info">
