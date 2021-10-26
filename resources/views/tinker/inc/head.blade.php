@@ -18,13 +18,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- general css -->
-    <link rel="stylesheet" href="/assets/css/master.css?v={{ config('app.version') }}">
-    <link rel="stylesheet" href="/assets/css/layout.css?v={{ config('app.version') }}">
-    <link rel="stylesheet" href="/assets/css/swiper.css?v={{ config('app.version') }}">
-    <link rel="stylesheet" href="/assets/css/symbol.css?v={{ config('app.version') }}">
+    <link rel="stylesheet" href="/themes/tinker/assets/css/master.css?v={{ config('app.version') }}">
+    <link rel="stylesheet" href="/themes/tinker/assets/css/layout.css?v={{ config('app.version') }}">
+    <link rel="stylesheet" href="/themes/tinker/assets/css/swiper.css?v={{ config('app.version') }}">
+    <link rel="stylesheet" href="/themes/tinker/assets/css/symbol.css?v={{ config('app.version') }}">
 
 
     <!-- general script -->
-    <script charset="utf-8" src="/assets/js/jquery-3.6.0.min.js?v={{ config('app.version') }}"></script>
-    <script charset="utf-8" src="/assets/js/swiper.js?v={{ config('app.version') }}"></script>
-    <script charset="utf-8" src="/assets/js/script.js?v={{ config('app.version') }}"></script>
+    <script charset="utf-8" src="/themes/tinker/assets/js/jquery-3.6.0.min.js?v={{ config('app.version') }}"></script>
+    <script charset="utf-8" src="/themes/tinker/assets/js/swiper.js?v={{ config('app.version') }}"></script>
+    <script charset="utf-8" src="/themes/tinker/assets/js/script.js?v={{ config('app.version') }}"></script>
