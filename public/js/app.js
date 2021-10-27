@@ -55659,6 +55659,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         // console.log('Product box mounted.')
         // showProductInfo();
+    },
+
+    methods: {
+        showProductInfo: function showProductInfo(e) {
+            var w_tooltip = $('#show-product-info').width();
+            var pad = 10;
+            var x_mouse = 0;
+            var y_mouse = 0;
+            var wrap_left = 0;
+            var wrap_right = 0;
+            var wrap_top = 0;
+            var wrap_bottom = 0;
+            wrap_left = 0;
+            wrap_top = $(window).scrollTop();
+            wrap_bottom = $(window).height();
+            wrap_right = $(window).width();
+            x_mouse = e.pageX;
+            y_mouse = e.pageY;
+            var h_tooltip = $('#show-product-info').height();
+
+            if (x_mouse + w_tooltip > wrap_right) $('#show-product-info').css('left', x_mouse - w_tooltip - pad);else $('#show-product-info').css('left', x_mouse + pad);
+
+            if (y_mouse - h_tooltip < wrap_top) $('#show-product-info').css('top', wrap_top);else $('#show-product-info').css('top', y_mouse - h_tooltip - pad);
+            $('#show-product-info').html("OK");
+            $('#show-product-info').show();
+            console.log("showProductInfo");
+        },
+        hideProductInfo: function hideProductInfo() {
+            $('#show-product-info').html();
+            $('#show-product-info').hide();
+            console.log("hideProductInfo");
+        }
     }
 });
 
@@ -55671,7 +55703,18 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "home-slider-item swiper-slide" }, [
-    _vm._m(0),
+    _c(
+      "div",
+      {
+        staticClass: "home-show-image",
+        on: {
+          mouseover: _vm.showProductInfo,
+          mousemove: _vm.showProductInfo,
+          mouseleave: _vm.hideProductInfo
+        }
+      },
+      [_vm._m(0)]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "home-slider-info" }, [
       _vm._m(1),
@@ -55753,12 +55796,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "home-show-image" }, [
-      _c("a", { attrs: { href: "#" } }, [
-        _c("img", {
-          attrs: { src: "https://via.placeholder.com/500x500", alt: "" }
-        })
-      ])
+    return _c("a", { attrs: { href: "#" } }, [
+      _c("img", {
+        attrs: { src: "https://via.placeholder.com/500x500", alt: "" }
+      })
     ])
   },
   function() {
