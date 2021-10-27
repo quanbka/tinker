@@ -2,17 +2,15 @@
     <div class="main-banner-wrapper flex-b align-s flex-s">
         <div class="menu-dummy"></div>
         <div class="list-banner-wrapper flex-b align-s flex-s">
-            <div class="main-banner">
+            <div class="main-banner" v-swiper:mySwiper="swiperOption">
                 <div class="swiper-wrapper">
-                    <?php for ($i=1; $i < 5; $i++) { ?>
-                        <a href="#" class="main-banner-item swiper-slide">
-                            <picture>
-                                <source media="(min-width: 320px)" srcset="/themes/tinker/images/banner/<?= $i?>.jpg">
-                                <source src="/themes/tinker/images/blank.gif">
-                                <img src="/themes/tinker/images/blank.gif" alt="">
-                            </picture>
-                        </a>
-                    <?php } ?>
+                    <a href="#" class="main-banner-item swiper-slide" :key="banner" v-for="banner in banners">
+                        <picture>
+                            <source media="(min-width: 320px)" srcset="/themes/tinker/images/banner/1.jpg">
+                            <source src="/themes/tinker/images/blank.gif">
+                            <img src="/themes/tinker/images/blank.gif" alt="">
+                        </picture>
+                    </a>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>

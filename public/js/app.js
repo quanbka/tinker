@@ -1285,6 +1285,23 @@ var recommendation = new Vue({
     el: '#recommendation'
 });
 
+var mainBanner = new Vue({
+    el: '#main-banner',
+    data: {
+        swiperOption: {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+        },
+        banners: [1, 2, 3]
+    }
+});
+
 /***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -55684,12 +55701,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (y_mouse - h_tooltip < wrap_top) $('#show-product-info').css('top', wrap_top);else $('#show-product-info').css('top', y_mouse - h_tooltip - pad);
             $('#show-product-info').html("OK");
             $('#show-product-info').show();
-            console.log("showProductInfo");
+            // console.log("showProductInfo");
         },
         hideProductInfo: function hideProductInfo() {
             $('#show-product-info').html();
             $('#show-product-info').hide();
-            console.log("hideProductInfo");
+            // console.log("hideProductInfo");
         }
     }
 });

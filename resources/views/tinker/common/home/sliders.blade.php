@@ -1,3 +1,3 @@
 <div id="app">
-    <category-box v-for="category in categories"></category-box>
+    <category-box v-bind:key="category.id" v-for="category in categories"></category-box>
 </div>

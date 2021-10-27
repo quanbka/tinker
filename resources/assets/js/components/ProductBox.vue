@@ -137,12 +137,12 @@
                     else $('#show-product-info').css('top',y_mouse - h_tooltip - pad);
                     $('#show-product-info').html("OK");
                     $('#show-product-info').show();
-                    console.log("showProductInfo");
+                    // console.log("showProductInfo");
                 },
                 hideProductInfo : function () {
                     $('#show-product-info').html();
                     $('#show-product-info').hide();
-                    console.log("hideProductInfo");
+                    // console.log("hideProductInfo");
                 }
             }
         }

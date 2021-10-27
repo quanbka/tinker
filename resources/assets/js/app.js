@@ -52,3 +52,20 @@ const app = new Vue({
 const recommendation = new Vue({
     el: '#recommendation',
 });
+
+const mainBanner = new Vue({
+    el: '#main-banner',
+    data : {
+        swiperOption: {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+        },
+        banners: [1,2,3]
+    }
+});

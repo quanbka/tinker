@@ -88,16 +88,16 @@ $(document).ready(function() {
         $('body').removeClass('open-menu')
     })
 
-    var mainBanner = new Swiper('.main-banner', {
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-    });
+    // var mainBanner = new Swiper('.main-banner', {
+    //     navigation: {
+    //         nextEl: ".swiper-button-next",
+    //         prevEl: ".swiper-button-prev",
+    //     },
+    //     pagination: {
+    //       el: ".swiper-pagination",
+    //       clickable: true,
+    //     },
+    // });
 
 
     // var homeSlider = new Swiper('.home-slider-init', {
