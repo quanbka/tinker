@@ -73,7 +73,7 @@
           }
         },
         mounted() {
-            console.log('Category mounted')
+            // console.log('Category mounted')
         }
     }
 </script>
