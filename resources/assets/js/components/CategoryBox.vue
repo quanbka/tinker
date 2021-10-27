@@ -18,26 +18,8 @@
                     </div>
                 </div>
                 <div class="home-slider-init" v-swiper:mySwiper="swiperOption">
-                    <div class="swiper-wrapper"  >
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
-                        <swiper-slide><product-box></product-box></swiper-slide>
+                    <div class="swiper-wrapper">
+                        <swiper-slide :key="product" v-for="product in products"><product-box></product-box></swiper-slide>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -54,7 +36,7 @@
     export default {
         data () {
           return {
-            // banners: [ '/1.jpg', '/2.jpg', '/3.jpg' ],
+            products : [1,2,3,4,5,6,7],
             swiperOption: {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
@@ -64,6 +46,7 @@
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
+
                 breakpoints: {
                     0: {
                         slidesPerView: 2,

@@ -48,3 +48,7 @@ const app = new Vue({
         }
     }
 });
+
+const recommendation = new Vue({
+    el: '#recommendation',
+});

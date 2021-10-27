@@ -1129,6 +1129,10 @@ var app = new Vue({
     }
 });
 
+var recommendation = new Vue({
+    el: '#recommendation'
+});
+
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -45436,31 +45440,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         var _swiperOption;
 
         return {
-            // banners: [ '/1.jpg', '/2.jpg', '/3.jpg' ],
+            products: [1, 2, 3, 4, 5, 6, 7],
             swiperOption: (_swiperOption = {
                 slidesPerView: 2,
                 slidesPerGroup: 2
@@ -45527,45 +45513,14 @@ var render = function() {
             _c(
               "div",
               { staticClass: "swiper-wrapper" },
-              [
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1),
-                _vm._v(" "),
-                _c("swiper-slide", [_c("product-box")], 1)
-              ],
+              _vm._l(_vm.products, function(product) {
+                return _c(
+                  "swiper-slide",
+                  { key: product },
+                  [_c("product-box")],
+                  1
+                )
+              }),
               1
             ),
             _vm._v(" "),

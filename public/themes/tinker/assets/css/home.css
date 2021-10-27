@@ -50,8 +50,9 @@
     font-weight: 500;
     line-height: 1;
 }
-.news-wrapper {
+.news-wrapper, .home-slider-wrapper {
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .truncate-blog-title {
