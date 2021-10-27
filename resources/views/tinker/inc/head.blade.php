@@ -4,6 +4,7 @@
     <meta name="theme-color" content="#cf0f22" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#cf0f22">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- favicon -->
     <link rel="icon" href="/favicon/favicon.png?v={{ config('app.version') }}" type="image/png"/>
@@ -22,9 +23,4 @@
     <link rel="stylesheet" href="/themes/tinker/assets/css/layout.css?v={{ config('app.version') }}">
     <link rel="stylesheet" href="/themes/tinker/assets/css/swiper.css?v={{ config('app.version') }}">
     <link rel="stylesheet" href="/themes/tinker/assets/css/symbol.css?v={{ config('app.version') }}">
-
-
-    <!-- general script -->
-    <script charset="utf-8" src="/themes/tinker/assets/js/jquery-3.6.0.min.js?v={{ config('app.version') }}"></script>
-    <script charset="utf-8" src="/themes/tinker/assets/js/swiper.js?v={{ config('app.version') }}"></script>
-    <script charset="utf-8" src="/themes/tinker/assets/js/script.js?v={{ config('app.version') }}"></script>
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}

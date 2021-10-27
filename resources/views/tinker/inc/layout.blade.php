@@ -4,7 +4,7 @@
         @include('inc.head')
         @yield('css')
     </head>
-    <body>
+    <body >
         @include('inc.header')
         @yield('main')
         @include('inc.footer')

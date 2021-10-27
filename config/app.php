@@ -177,6 +177,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Igaster\LaravelTheme\themeServiceProvider::class,
+        Megaads\Apify\ApifyServiceProvider::class,
 
 
     ],
