@@ -754,11 +754,11 @@ del {
         pointer-events: none;
     }
 
-    .home-slider-item.swiper-slide {
+    /* .home-slider-item.swiper-slide {
         width: 170px;
         min-width: 170px;
         padding: 0
-    }
+    } */
 
     .code-wrapper span {
         display: none;
@@ -972,8 +972,8 @@ del {
     }
 
     .home-slider-init .home-slider-item {
-        width: 256px;
-        min-width: 256px;
+        /* width: 256px; */
+        /* min-width: 256px; */
     }
 }
 

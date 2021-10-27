@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(document).scroll(function() {
-        
+
         var y = $(this).scrollTop();
         var heightHeader = $('.site-header').height();
         if ($('#main-banner').is(':visible') == true) {
@@ -100,34 +100,34 @@ $(document).ready(function() {
     });
 
 
-    var homeSlider = new Swiper('.home-slider-init', {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        slidesPerView: "auto",
-        spaceBetween: 0,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            760: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-            },
-            990: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-            },
-            1200: {
-                slidesPerView: 5,
-                slidesPerGroup: 5,
-            },
-            1300: {
-                slidesPerView: 6,
-                slidesPerGroup: 6,
-            }
-        },
-    });
+    // var homeSlider = new Swiper('.home-slider-init', {
+    //     slidesPerView: 2,
+    //     slidesPerGroup: 2,
+    //     slidesPerView: "auto",
+    //     spaceBetween: 0,
+    //     navigation: {
+    //         nextEl: ".swiper-button-next",
+    //         prevEl: ".swiper-button-prev",
+    //     },
+    //     breakpoints: {
+    //         760: {
+    //             slidesPerView: 3,
+    //             slidesPerGroup: 3,
+    //         },
+    //         990: {
+    //             slidesPerView: 4,
+    //             slidesPerGroup: 4,
+    //         },
+    //         1200: {
+    //             slidesPerView: 5,
+    //             slidesPerGroup: 5,
+    //         },
+    //         1300: {
+    //             slidesPerView: 6,
+    //             slidesPerGroup: 6,
+    //         }
+    //     },
+    // });
 
     var recommendationSlider = new Swiper('.recommendation-slider', {
         slidesPerView: 2,

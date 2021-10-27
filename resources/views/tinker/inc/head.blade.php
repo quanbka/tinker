@@ -21,6 +21,6 @@
     <!-- general css -->
     <link rel="stylesheet" href="/themes/tinker/assets/css/master.css?v={{ config('app.version') }}">
     <link rel="stylesheet" href="/themes/tinker/assets/css/layout.css?v={{ config('app.version') }}">
-    <link rel="stylesheet" href="/themes/tinker/assets/css/swiper.css?v={{ config('app.version') }}">
+    {{-- <link rel="stylesheet" href="/themes/tinker/assets/css/swiper.css?v={{ config('app.version') }}"> --}}
     <link rel="stylesheet" href="/themes/tinker/assets/css/symbol.css?v={{ config('app.version') }}">
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}

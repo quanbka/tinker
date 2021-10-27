@@ -17,17 +17,27 @@
                         <a class="home-slider-tab-link" href="#">Xem hết</a>
                     </div>
                 </div>
-                <div class="home-slider-init">
-                    <div class="swiper-wrapper">
-                        <product-box></product-box>
-                        <product-box></product-box>
-                        <product-box></product-box>
-                        <product-box></product-box>
-                        <product-box></product-box>
-                        <product-box></product-box>
-                        <product-box></product-box>
-                        <product-box></product-box>
-
+                <div class="home-slider-init" v-swiper:mySwiper="swiperOption">
+                    <div class="swiper-wrapper"  >
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
+                        <swiper-slide><product-box></product-box></swiper-slide>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -42,6 +52,43 @@
 
 <script>
     export default {
+        data () {
+          return {
+            // banners: [ '/1.jpg', '/2.jpg', '/3.jpg' ],
+            swiperOption: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                slidesPerView: "auto",
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        slidesPerGroup: 2,
+                    },
+                    760: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
+                    },
+                    990: {
+                        slidesPerView: 4,
+                        slidesPerGroup: 4,
+                    },
+                    1200: {
+                        slidesPerView: 5,
+                        slidesPerGroup: 5,
+                    },
+                    1300: {
+                        slidesPerView: 6,
+                        slidesPerGroup: 6,
+                    }
+                },
+            }
+          }
+        },
         mounted() {
             console.log('Category mounted')
         }
