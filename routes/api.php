@@ -15,3 +15,4 @@ use Illuminate\Http\Request;
 
 
 Route::get('/latest-products', 'Services\CategoryService@latestProducts');
+Route::get('/root-categories', 'Services\CategoryService@getRootCategories');

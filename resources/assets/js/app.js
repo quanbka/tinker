@@ -31,7 +31,7 @@ const app = new Vue({
     data: {
         'categories': [],
         'isLoadedLatestProducts' : false,
-        'isLoadedBestSellerProducts' : false,
+        'isLoadedRootCategories' : false,
     },
     mounted: function() {
         // this.getAllCategories();
@@ -40,12 +40,17 @@ const app = new Vue({
         getNext($state) {
             let self = this;
             if (!this.isLoadedLatestProducts) {
-                this.loadedLatestProducts($state);
+                this.loadLatestProducts($state);
+                return;
+            }
+            if (!this.isLoadedRootCategories) {
+                this.loadRootCategories($state);
                 return;
             }
             $state.complete();
         },
-        loadedLatestProducts ($state) {
+        loadLatestProducts ($state) {
+            console.log("loadLatestProducts")
             let self = this;
             axios.get('/api/latest-products')
                 .then(function (response) {
@@ -60,19 +65,22 @@ const app = new Vue({
                     $state.loaded();
                 });
         },
-        getAllCategories() {
-            console.log("getAllCategories");
+        loadRootCategories($state) {
+            console.log("loadRootCategories");
             let self = this;
-            axios.get('/api/category?filters=type=category,parent_id=0&page_size=-1&embeds=children')
+            // axios.get('/api/category?filters=type=category,parent_id=0&page_size=-1&embeds=children')
+            axios.get('/api/root-categories')
                 .then(function(response) {
-                    if (response.data.status == 'successful') {
-                        self.categories = response.data.result;
-                    }
+                    // if (response.data.status == 'successful') {
+                        self.categories.push(...response.data);
+                    // }
                 })
                 .catch(function(error) {
                     console.log(error);
                 })
                 .then(function() {
+                    self.isLoadedRootCategories = true;
+                    $state.loaded();
                 });
         }
 

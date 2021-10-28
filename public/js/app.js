@@ -1238,6 +1238,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_infinite_loading___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_infinite_loading__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_swiper_css_swiper_css__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_swiper_css_swiper_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_swiper_css_swiper_css__);
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -1268,7 +1270,7 @@ var app = new Vue({
     data: {
         'categories': [],
         'isLoadedLatestProducts': false,
-        'isLoadedBestSellerProducts': false
+        'isLoadedRootCategories': false
     },
     mounted: function mounted() {
         // this.getAllCategories();
@@ -1277,12 +1279,17 @@ var app = new Vue({
         getNext: function getNext($state) {
             var self = this;
             if (!this.isLoadedLatestProducts) {
-                this.loadedLatestProducts($state);
+                this.loadLatestProducts($state);
+                return;
+            }
+            if (!this.isLoadedRootCategories) {
+                this.loadRootCategories($state);
                 return;
             }
             $state.complete();
         },
-        loadedLatestProducts: function loadedLatestProducts($state) {
+        loadLatestProducts: function loadLatestProducts($state) {
+            console.log("loadLatestProducts");
             var self = this;
             axios.get('/api/latest-products').then(function (response) {
                 self.categories.push(response.data);
@@ -1294,16 +1301,22 @@ var app = new Vue({
                 $state.loaded();
             });
         },
-        getAllCategories: function getAllCategories() {
-            console.log("getAllCategories");
+        loadRootCategories: function loadRootCategories($state) {
+            console.log("loadRootCategories");
             var self = this;
-            axios.get('/api/category?filters=type=category,parent_id=0&page_size=-1&embeds=children').then(function (response) {
-                if (response.data.status == 'successful') {
-                    self.categories = response.data.result;
-                }
+            // axios.get('/api/category?filters=type=category,parent_id=0&page_size=-1&embeds=children')
+            axios.get('/api/root-categories').then(function (response) {
+                var _self$categories;
+
+                // if (response.data.status == 'successful') {
+                (_self$categories = self.categories).push.apply(_self$categories, _toConsumableArray(response.data));
+                // }
             }).catch(function (error) {
                 console.log(error);
-            }).then(function () {});
+            }).then(function () {
+                self.isLoadedRootCategories = true;
+                $state.loaded();
+            });
         }
     }
 });
