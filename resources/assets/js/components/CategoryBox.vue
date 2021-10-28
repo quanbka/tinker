@@ -1,11 +1,11 @@
 <template>
-    <div class="home-slider-wrapper">
+    <div class="home-slider-wrapper" v-if="category">
         <div class="site-w">
 
             <div class="home-slider-content-box">
                 <div class="home-slider-tabs flex-b align-c">
                     <h2 class="home-slider-tab-heading">
-                        Title
+                        {{ category.title }}
                     </h2>
                     <div class="home-slider-tab-list flex-b align-c">
                         <div class="home-slider-tab-item"><a class="home-slider-tab-link" href="#">Url</a></div>
@@ -14,12 +14,15 @@
                         <div class="home-slider-tab-item"><a class="home-slider-tab-link" href="#">Url</a></div>
                     </div>
                     <div class="home-slider-tab-view-all is-desktop">
-                        <a class="home-slider-tab-link" href="#">Xem hết</a>
+                        <a class="home-slider-tab-link" :href="category.url">Xem hết</a>
                     </div>
                 </div>
                 <div class="home-slider-init" v-swiper:mySwiper="swiperOption">
                     <div class="swiper-wrapper">
-                        <swiper-slide :key="product" v-for="product in products"><product-box></product-box></swiper-slide>
+                        <swiper-slide v-for="product in category.products" v-bind:key="product.id">
+                            <product-box v-bind:product="product">
+                            </product-box>
+                        </swiper-slide>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
@@ -36,7 +39,8 @@
     export default {
         data () {
           return {
-            products : [1,2,3,4,5,6,7],
+
+            // products : [1,2,3,4,5,6,7,8],
             swiperOption: {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
@@ -72,8 +76,14 @@
             }
           }
         },
+        props : {
+            category: {
+              type: Object
+            }
+        },
         mounted() {
-            // console.log('Category mounted')
+            // console.log(this)
+            // console.log(this.category.title)
         }
     }
 </script>

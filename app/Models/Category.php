@@ -36,8 +36,11 @@ class Category extends Model
 
     // Begin overwrite attribute
 
-    public function getUrlAttribute () {
-            return route('category', ['slug' => $this->slug, 'id' => $this->id]);
+    public function getUrlAttribute ($value) {
+        if ($value) {
+            return $value;
+        }
+        return route('category', ['slug' => $this->slug, 'id' => $this->id]);
     }
 
     // End overwrite attribute
