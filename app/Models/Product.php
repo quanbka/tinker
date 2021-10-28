@@ -19,4 +19,8 @@ class Product extends Model
         });
     }
 
+    public function getImageUrlAttribute ($value) {
+        return "https://chiaki.vn/upload/$value";
+    }
+
 }

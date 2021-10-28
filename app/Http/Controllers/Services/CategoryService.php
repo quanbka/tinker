@@ -16,7 +16,7 @@ class CategoryService extends Controller
         $tempCategory['title'] = "Sản phẩm mới nhất";
         $tempCategory['url'] = "#";
         $tempCategory['products'] = Product::take(24)
-            ->select('id','slug','title','price', 'image_url')
+            // ->select('id','slug','title','price', 'image_url')
             ->get();
         return $tempCategory;
     }

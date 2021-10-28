@@ -2,7 +2,7 @@
     <div class="home-slider-item swiper-slide">
         <div class="home-show-image" @mouseover="showProductInfo" @mousemove="showProductInfo" @mouseleave="hideProductInfo">
             <a href="#">
-                <img src="https://via.placeholder.com/500x500" alt="">
+                <img :src="product.image_url" alt="">
             </a>
         </div>
         <div class="home-slider-info">
@@ -15,7 +15,7 @@
                     <div class="rating-star-in-list"></div>
                 </div>
                 <div class="code-wrapper">
-                    <span>Mã SP: CAHI330</span>
+                    <span>CAHI330</span>
                 </div>
             </div>
             <div class="home-slider-product-title">
@@ -65,6 +65,7 @@
         },
         methods: {
             showProductInfo: function(e) {
+                let self = this;
                 var w_tooltip = $('#show-product-info').width();
                 var pad = 10;
                 var x_mouse = 0;
@@ -88,7 +89,59 @@
 
                 if (y_mouse - h_tooltip < wrap_top) $('#show-product-info').css('top', wrap_top);
                 else $('#show-product-info').css('top', y_mouse - h_tooltip - pad);
-                // $('#show-product-info').html("OK");
+
+                let html = `<a href="/laptop-asus-gaming-tuf-fx516pe-hn005t-xam" class="hover-title">
+                    ${self.product.title}
+                </a>
+                <div class="hover-content">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>- Giá bán:</td>
+                                <td>
+                                    <span class="img-price-full">28.599.000đ</span>
+                                    <span class="hover-vat">
+                                        [Đã bao gồm VAT]
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>- Giá thấp nhất:</td>
+                                <td id="minPrice-59057" class="p-extend-minprice-text">28.599.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>- Bảo hành:</td>
+                                <td>24 Tháng (Pin 12 Tháng)</td>
+                            </tr>
+                            <tr>
+                                <td>- Kho hàng:</td>
+                                <td>Liên hệ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <span class="tooltip-title">
+                        Thông số sản phẩm
+                    </span>
+                    <div class="hover-offer ">
+                        - CPU: Intel Core i7 11370H
+                        <br>
+
+                        - RAM: 8GB
+                        <br>
+
+                        - Ổ cứng: 512GB SSD
+                        <br>
+
+                        - VGA: NVIDIA RTX 3050Ti 4GB
+                        <br>
+
+                        - Màn hình: 15.6 inch FHD 144hz
+                        <br>
+
+                    </div>
+                </div>`;
+                $('#show-product-info').html(html);
                 $('#show-product-info').show();
                 // console.log("showProductInfo");
             },

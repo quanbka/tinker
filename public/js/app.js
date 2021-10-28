@@ -55660,6 +55660,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     methods: {
         showProductInfo: function showProductInfo(e) {
+            var self = this;
             var w_tooltip = $('#show-product-info').width();
             var pad = 10;
             var x_mouse = 0;
@@ -55679,7 +55680,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             if (x_mouse + w_tooltip > wrap_right) $('#show-product-info').css('left', x_mouse - w_tooltip - pad);else $('#show-product-info').css('left', x_mouse + pad);
 
             if (y_mouse - h_tooltip < wrap_top) $('#show-product-info').css('top', wrap_top);else $('#show-product-info').css('top', y_mouse - h_tooltip - pad);
-            // $('#show-product-info').html("OK");
+
+            var html = '<a href="/laptop-asus-gaming-tuf-fx516pe-hn005t-xam" class="hover-title">\n                ' + self.product.title + '\n            </a>\n            <div class="hover-content">\n                <table>\n                    <tbody>\n                        <tr>\n                            <td>- Gi\xE1 b\xE1n:</td>\n                            <td>\n                                <span class="img-price-full">28.599.000\u0111</span>\n                                <span class="hover-vat">\n                                    [\u0110\xE3 bao g\u1ED3m VAT]\n                                </span>\n                            </td>\n                        </tr>\n                        <tr>\n                            <td>- Gi\xE1 th\u1EA5p nh\u1EA5t:</td>\n                            <td id="minPrice-59057" class="p-extend-minprice-text">28.599.000\u0111</td>\n                        </tr>\n                        <tr>\n                            <td>- B\u1EA3o h\xE0nh:</td>\n                            <td>24 Th\xE1ng (Pin 12 Th\xE1ng)</td>\n                        </tr>\n                        <tr>\n                            <td>- Kho h\xE0ng:</td>\n                            <td>Li\xEAn h\u1EC7</td>\n                        </tr>\n                    </tbody>\n                </table>\n\n                <span class="tooltip-title">\n                    Th\xF4ng s\u1ED1 s\u1EA3n ph\u1EA9m\n                </span>\n                <div class="hover-offer ">\n                    - CPU: Intel Core i7 11370H\n                    <br>\n\n                    - RAM: 8GB\n                    <br>\n\n                    - \u1ED4 c\u1EE9ng: 512GB SSD\n                    <br>\n\n                    - VGA: NVIDIA RTX 3050Ti 4GB\n                    <br>\n\n                    - M\xE0n h\xECnh: 15.6 inch FHD 144hz\n                    <br>\n\n                </div>\n            </div>';
+            $('#show-product-info').html(html);
             $('#show-product-info').show();
             // console.log("showProductInfo");
         },
@@ -55710,11 +55713,15 @@ var render = function() {
           mouseleave: _vm.hideProductInfo
         }
       },
-      [_vm._m(0)]
+      [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("img", { attrs: { src: _vm.product.image_url, alt: "" } })
+        ])
+      ]
     ),
     _vm._v(" "),
     _c("div", { staticClass: "home-slider-info" }, [
-      _vm._m(1),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "home-slider-product-title" }, [
         _c(
@@ -55733,7 +55740,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _vm._m(2),
+      _vm._m(1),
       _vm._v(" "),
       _c("div", { staticClass: "home-slide-action flex-b align-c flex-s" }, [
         _c("div", { staticClass: "product-status flex-b align-c" }, [
@@ -55806,16 +55813,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "#" } }, [
-      _c("img", {
-        attrs: { src: "https://via.placeholder.com/500x500", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "home-slide-rate flex-b align-c flex-s" }, [
       _c("div", { staticClass: "rating-wrap flex-b align-c flex-s" }, [
         _c("div", { staticClass: "rating-star-in-list" }),
@@ -55830,7 +55827,7 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "code-wrapper" }, [
-        _c("span", [_vm._v("Mã SP: CAHI330")])
+        _c("span", [_vm._v("CAHI330")])
       ])
     ])
   },
