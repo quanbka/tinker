@@ -78,7 +78,7 @@
     </div>
 </footer>
  <div id="show-product-info">
-         
+
  </div>
 
 

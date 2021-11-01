@@ -1,0 +1,126 @@
+.category-banner {
+    overflow: hidden;
+    position: relative;
+}
+
+.category-banner-item {
+    position: relative;
+}
+
+.list-product-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 1rem;
+}
+
+.product-item-wrapper {
+    display: block;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.category-content-wrapper,
+.category-sidebar,
+.category-content {
+    width: 100%;
+}
+
+.category-content-wrapper {
+    margin-top: 1.5rem;
+}
+
+.product-item-image {
+    display: block;
+    height: 170px;
+    overflow: hidden;
+}
+
+.product-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product-content-box {
+    background-color: var(--white);
+    border-radius: 6px;
+}
+
+.product-product-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 48px;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-rate {
+    margin-bottom: 6px;
+}
+
+.criteria-label {
+    position: relative;
+    cursor: pointer;
+}
+.criteria-label input {
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+}
+
+.criteria-label span {
+    background-color: var(--white);
+    color: var(--primary);
+    padding: 8px 12px;
+}
+.criteria-label input:checked ~ span {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+@media (min-width: 990px) {
+    .category-sidebar {
+        width: var(--left);
+    }
+    .category-content {
+        width: calc(100% - var(--left));
+        padding-left: 1rem;
+    }
+
+    .category-banner-item {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+    }
+
+    .list-product-item {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 1rem;
+    }
+
+    .product-item-image {
+        height: 240px;
+    }
+}
+
+@media (max-width: 780px), (max-width: 990px) and (orientation:landscape) {
+    .product-tab-list {
+        width: 100%;
+        overflow-x: auto;
+        flex-flow: nowrap;
+        white-space: nowrap;
+    }
+
+    .product-wrapper .site-w {
+        padding: 0;
+    }
+}
+
+@media (min-width: 780px) and (orientation:portrait), (min-width: 990px) {
+
+}
