@@ -1,6 +1,14 @@
 @extends('inc.layout')
 @section('main')
-    Category
+    <h1>{{ $category->title }}</h1>
+    <ul>
+        @foreach ($products as $key => $product)
+            <li>{{ $product->title }}</li>
+        @endforeach
+
+    </ul>
+    
+    {{ $products->render() }}
 @endsection
 @section('css')
     <link rel="stylesheet" href="/themes/tinker/css/category.css">
