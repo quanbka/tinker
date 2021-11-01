@@ -15,4 +15,10 @@ class ProductController extends Controller
         View::share('products', $products);
         return view('category');
     }
+
+    public function product ($slug, $id) {
+        $product = Product::findOrFail($id);
+        View::share('product', $product);
+        return view('product');
+    }
 }
