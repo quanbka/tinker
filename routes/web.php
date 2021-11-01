@@ -13,15 +13,15 @@
 
 Auth::routes();
 Route::get('/', 'IndexController@home')->name('home');
-Route::get('/{slug}-c{id}.html',
+Route::get('/{slug}-c{id}',
     'ProductController@category')->name('category')->where('slug', '[0-9a-zA-Z/_\-]+')->where('id', '[0-9]+');
 Route::get('/search',
     'ProductController@search')->name('search');
-Route::get('/{slug}-p{id}.html',
+Route::get('/{slug}-p{id}',
     'ProductController@product')->name('product')->where('slug', '[0-9a-zA-Z/_\-]+')->where('id', '[0-9]+');
-Route::get('/tin-tuc.html',
+Route::get('/tin-tuc',
     'PostController@allPostList')->name('news');
-Route::get('/{slug}-a{id}.html',
+Route::get('/{slug}-a{id}',
     'PostController@postList')->name('archive')->where('slug', '[0-9a-zA-Z/_\-]+')->where('id', '[0-9]+');
-Route::get('/{slug}-n{id}.html',
+Route::get('/{slug}-n{id}',
     'PostController@post')->name('post')->where('slug', '[0-9a-zA-Z/_\-]+')->where('id', '[0-9]+');

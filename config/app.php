@@ -167,6 +167,8 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -177,8 +179,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Igaster\LaravelTheme\themeServiceProvider::class,
-        Megaads\Apify\ApifyServiceProvider::class,
+        // Megaads\Apify\ApifyServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+
 
 
 
@@ -232,6 +235,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Theme' => Igaster\LaravelTheme\Facades\Theme::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
 
 
     ],
