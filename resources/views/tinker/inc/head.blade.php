@@ -1,14 +1,14 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Electic - Thiết bị điện tử, điện lạnh</title>
+    <title>Tinker - Máy tính, Điện thoại, Thiết bị văn phòng - Giải pháp Công nghệ</title>
     <meta name="theme-color" content="#cf0f22" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#cf0f22">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- favicon -->
-    <link rel="icon" href="/favicon/favicon.png?v={{ config('app.version') }}" type="image/png"/>
-    <link rel="icon" href="/favicon/favicon.ico?v={{ config('app.version') }}" type="image/icon"/>
+    <link rel="icon" href="/themes/tinker/favicon/favicon.png?v={{ config('app.version') }}" type="image/png"/>
+    <link rel="icon" href="/themes/tinker/favicon/favicon.ico?v={{ config('app.version') }}" type="image/icon"/>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
