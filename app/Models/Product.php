@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 class Product extends Model
 {
     protected $table = 'chi_product';
+    protected $appends = ['url'];
 
     protected static function boot()
     {
@@ -21,6 +22,13 @@ class Product extends Model
 
     public function getImageUrlAttribute ($value) {
         return "https://chiaki.vn/upload/$value";
+    }
+
+    public function getUrlAttribute ($value) {
+        if ($value) {
+            return $value;
+        }
+        return route('category', ['slug' => $this->slug, 'id' => $this->id]);
     }
 
 }
