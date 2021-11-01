@@ -178,6 +178,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Igaster\LaravelTheme\themeServiceProvider::class,
         Megaads\Apify\ApifyServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+
 
 
     ],
@@ -228,6 +230,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Image' => Intervention\Image\Facades\Image::class,
         'Theme' => Igaster\LaravelTheme\Facades\Theme::class,
 
 

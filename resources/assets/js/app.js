@@ -12,6 +12,10 @@ import InfiniteLoading from 'vue-infinite-loading';
 
 import 'swiper/css/swiper.css'
 
+function getImageCdn (url, width, height) {
+    return `/cdn/${width}/${height}/${url}`;
+}
+
 
 
 /**
