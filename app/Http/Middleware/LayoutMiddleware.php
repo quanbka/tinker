@@ -23,7 +23,7 @@ class LayoutMiddleware
 
     public function initMenu() {
         $menu = Parameter::select('value2')->where('key2', 'frontend.menu')->first();
-        $menu = json_decode($menu->value2);
+        $menu = $menu ? json_decode($menu->value2) : [];
         View::share('menu', $menu);
     }
 }
