@@ -17,24 +17,13 @@ class LayoutMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $this->initHeader();
         $this->initMenu();
-        $this->initFooter();
         return $next($request);
     }
 
-    public function initHeader() {
-        $menu = ['1', '2', '3'];
-        View::share('menu', $menu);
-    }
-
     public function initMenu() {
-        $menu = ['1', '2', '3'];
-        View::share('menu', $menu);
-    }
-
-    public function initFooter() {
-        $menu = ['1', '2', '3'];
+        $menu = Parameter::select('value2')->where('key2', 'frontend.menu')->first();
+        $menu = json_decode($menu->value2);
         View::share('menu', $menu);
     }
 }
