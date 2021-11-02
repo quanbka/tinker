@@ -1,3 +1,6 @@
+<?php
+    \Debugbar::info($menu);
+?>
 <nav class="navigation-wrapper">
     <ul class="main-menu">
         <li class="main-menu-item is-mobile gotohome-item">
