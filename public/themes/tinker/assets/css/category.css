@@ -280,6 +280,11 @@
     .list-product-item {
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr))
     }
+
+    .pagination {
+        justify-content: center;
+        padding: 15px 0;
+    }
 }
 
 @media (max-width: 760px), (max-width: 990px) and (orientation:landscape) {
