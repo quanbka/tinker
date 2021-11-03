@@ -1,7 +1,7 @@
 @extends('inc.layout')
 @section('css')
     <link rel="stylesheet" href="/themes/tinker/assets/css/swiper.css?v={{ config('app.version') }}">
-    <link rel="stylesheet" href="/themes/tinker/assets/css/category.css">
+    <link rel="stylesheet" href="/themes/tinker/assets/css/category.css?v={{ time() }}">
 @endsection
 
 @section('main')
@@ -21,6 +21,10 @@
                 </li>
             </ul>
         </div>
+        <h1 class="main-heading">
+            {{ $category->title }}
+        </h1>
+
         <div class="category-banner">
             <div class="swiper-wrapper">
                 @for($i=1; $i < 6; $i++)
@@ -41,34 +45,48 @@
         <!-- content -->
         <main class="category-content-wrapper flex-b flex-w">
             <aside class="category-sidebar">
-
+                @include('common/products/filter-product')
             </aside>
             <div class="category-content">
-                <h1 class="main-heading">
-                    {{ $category->title }}
-                </h1>
+
                 <div class="category-top-box">
                     <div class="filter-price">
-
+                        <form class="filter-by-price flex-b align-c" action="?price" method="get">
+                            <span class="filter-by-price-title">
+                                Lọc theo giá tiền
+                            </span>
+                            <input class="form-control" name="price" pattern="[0-9]*" placeholder="Giá từ">
+                            <small>-</small>
+                            <input class="form-control" name="price" pattern="[0-9]*" placeholder="Giá đến">
+                            <button class="button" type="submit" >Áp dụng</button>
+                        </form>
                     </div>
-                    <div class="filter-criteria flex-b flex-s align-c">
-                        <form class="criteria-form" action="index.html" method="post">
+                    <div class="filter-by-criteria flex-b flex-s align-c">
+                        <div class="open-filter-box is-mobile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                                <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+                            </svg>
+                            <span class="filter-icon">
+                                Lọc
+                            </span>
+                        </div>
+                        <div class="criteria-form">
                             <?php
                             $criteriaFiltet = [
-                                'new' => ['Hàng mới'],
-                                'view' => ['Xem nhiều'],
-                                'price-desc' => ['Giá giảm dần'],
-                                'price-asc' => ['Giá tăng dần'],
+                                'default' => ['Phổ biến', '?sort=default'],
+                                'newest' => ['Hàng mới', '?sort=newest'],
+                                'bestsaller' => ['Bán chạy', '?sort=top-seller'],
+                                'price-desc' => ['Giá giảm dần', '?sort=price-desc'],
+                                'price-asc' => ['Giá tăng dần', '?sort=price-asc'],
                             ]
                             ?>
                             @foreach ($criteriaFiltet as $key => $value)
-                            <label class="criteria-label" for="criteria-{{ $key }}">
-                                <input id="criteria-{{ $key }}" type="radio" name="criteria">
-                                <span><?= $value[0] ?></span>
-                            </label>
+                                <a class="criteria-item" href="<?= $value[1] ?>">
+                                    <?= $value[0] ?>
+                                </a>
                             @endforeach
 
-                        </form>
+                        </div>
                         {{ $products->render() }}
                     </div>
                 </div>
@@ -77,7 +95,7 @@
                     @foreach ($products as $key => $product)
                     <div class="product-item-wrapper">
                         <div class="product-item-image">
-                            <a href="{{ $product->slug}}">
+                            <a class="product-item-image-link" href="{{ $product->slug}}">
                                 <img src="{{ $product->image_url}}" alt="">
                             </a>
                         </div>

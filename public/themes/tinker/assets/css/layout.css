@@ -594,6 +594,17 @@ del {
     display: block;
 }
 
+@media (max-width: 1024px) {
+    /* .header-tags, */
+    .hot-category {
+        display: none;
+    }
+
+    .header-support-action {
+        margin-left: auto;
+    }
+}
+
 @media (max-width: 780px), (max-width: 990px) and (orientation:landscape) {
     .menu-icon {
         background: transparent;
@@ -605,7 +616,7 @@ del {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-right: 1rem;
+        margin-right: 0;
     }
 
     .menu-icon span {
@@ -619,6 +630,7 @@ del {
     .site-logo {
         width: 160px;
         min-width: 160px;
+        margin-left: 10px;
     }
 
     .footer-content {
@@ -641,7 +653,7 @@ del {
     .navigation-wrapper {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -300px;
         z-index: 111;
         background-color: #fff;
         height: 100%;
@@ -649,7 +661,6 @@ del {
         overflow-y: auto;
         padding-bottom: 80px;
         box-shadow: 0 3px 4px -1px rgb(99 99 99 /20%), 0 5px 10px 0px rgb(99 99 99 /14%), 0 1px 12px 0px rgb(99 99 99 /10%);
-        transform: translateX(-100%);
         transition: var(--trans);
     }
 
@@ -667,7 +678,8 @@ del {
         pointer-events: none;
     }
 
-    .open-menu {
+    .open-menu,
+    .open-filter {
         overflow: hidden;
     }
 
@@ -676,8 +688,18 @@ del {
         opacity: 1;
         pointer-events: all;
     }
+
     .open-menu .navigation-wrapper {
-        transform: translateX(0);
+        left: 0;
+    }
+
+    .open-menu .search-wrapper {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    .header-tags {
+        display: none;
     }
 
     .gotohome-item {
@@ -782,14 +804,11 @@ del {
         pointer-events: none;
     }
 
-    .hot-category {
-        display: none;
+    .header-search-wrapper {
+        position: static;
+        z-index: 100;
     }
 
-    .header-search-wrapper {
-        position: relative;
-        z-index: 90;
-    }
 
     .search-wrapper.search-action {
         position: fixed;
@@ -854,6 +873,37 @@ del {
 
     .search-wrapper.search-action .search-result-wrapper {
         display: block !important;
+    }
+
+    .close-search-icon {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .search-wrapper.search-action .close-search-icon {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .header-news {
+        display: none;
+    }
+
+    .short-link-item {
+        padding: 0;
+        margin: 0;
+    }
+
+    .short-link-item span {
+        display: none;
+    }
+
+    .breadcrumb {
+        margin: 0;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
     }
 
 }

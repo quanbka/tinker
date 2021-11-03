@@ -96,7 +96,7 @@
                         <div class="default-loading"></div>
                     </button>
                 </form>
-                <button type="button" class="search-icon is-mobile">
+                <button type="button" class="search-icon close-search-icon is-mobile">
                     &times;
                 </button>
                 @include('inc/suggestions')
