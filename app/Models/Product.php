@@ -10,14 +10,9 @@ class Product extends Model
     protected $table = 'chi_product';
     protected $appends = ['url'];
 
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::addGlobalScope('sort', function (Builder $builder) {
-            $builder->orderBy('chi_product.sorder', 'desc')
-                    ->orderBy('chi_product.id', 'desc');
-        });
+    public function scopeDefaultOrder ($query) {
+        return $query->orderBy('chi_product.sorder', 'desc')
+                ->orderBy('chi_product.id', 'desc');
     }
 
     public function getImageUrlAttribute ($value) {

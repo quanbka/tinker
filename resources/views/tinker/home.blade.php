@@ -8,3 +8,6 @@
 @section('css')
     <link rel="stylesheet" href="/themes/tinker/assets/css/home.css">
 @endsection
+@section('js')
+    <script src="{{ asset('js/app.js') }}"></script>
+@endsection

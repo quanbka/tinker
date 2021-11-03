@@ -65,85 +65,88 @@
         },
         methods: {
             showProductInfo: function(e) {
-                let self = this;
-                var w_tooltip = $('#show-product-info').width();
-                var pad = 10;
-                var x_mouse = 0;
-                var y_mouse = 0;
-                var wrap_left = 0;
-                var wrap_right = 0;
-                var wrap_top = 0;
-                var wrap_bottom = 0;
-                wrap_left = 0;
-                wrap_top = $(window).scrollTop();
-                wrap_bottom = $(window).height();
-                wrap_right = $(window).width();
-                x_mouse = e.pageX;
-                y_mouse = e.pageY;
-                let h_tooltip = $('#show-product-info').height();
+                if (!is_mobile) {
+                    let self = this;
+                    var w_tooltip = $('#show-product-info').width();
+                    var pad = 10;
+                    var x_mouse = 0;
+                    var y_mouse = 0;
+                    var wrap_left = 0;
+                    var wrap_right = 0;
+                    var wrap_top = 0;
+                    var wrap_bottom = 0;
+                    wrap_left = 0;
+                    wrap_top = $(window).scrollTop();
+                    wrap_bottom = $(window).height();
+                    wrap_right = $(window).width();
+                    x_mouse = e.pageX;
+                    y_mouse = e.pageY;
+                    let h_tooltip = $('#show-product-info').height();
 
 
-                if (x_mouse + w_tooltip > wrap_right) $('#show-product-info').css('left', x_mouse - w_tooltip - pad);
-                else $('#show-product-info').css('left', x_mouse + pad);
+                    if (x_mouse + w_tooltip > wrap_right) $('#show-product-info').css('left', x_mouse - w_tooltip - pad);
+                    else $('#show-product-info').css('left', x_mouse + pad);
 
 
-                if (y_mouse - h_tooltip < wrap_top) $('#show-product-info').css('top', wrap_top);
-                else $('#show-product-info').css('top', y_mouse - h_tooltip - pad);
+                    if (y_mouse - h_tooltip < wrap_top) $('#show-product-info').css('top', wrap_top);
+                    else $('#show-product-info').css('top', y_mouse - h_tooltip - pad);
 
-                let html = `<a href="/laptop-asus-gaming-tuf-fx516pe-hn005t-xam" class="hover-title">
-                    ${self.product.title}
-                </a>
-                <div class="hover-content">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>- Giá bán:</td>
-                                <td>
-                                    <span class="img-price-full">28.599.000đ</span>
-                                    <span class="hover-vat">
-                                        [Đã bao gồm VAT]
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>- Giá thấp nhất:</td>
-                                <td id="minPrice-59057" class="p-extend-minprice-text">28.599.000đ</td>
-                            </tr>
-                            <tr>
-                                <td>- Bảo hành:</td>
-                                <td>24 Tháng (Pin 12 Tháng)</td>
-                            </tr>
-                            <tr>
-                                <td>- Kho hàng:</td>
-                                <td>Liên hệ</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    let html = `<a href="/laptop-asus-gaming-tuf-fx516pe-hn005t-xam" class="hover-title">
+                        ${self.product.title}
+                    </a>
+                    <div class="hover-content">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>- Giá bán:</td>
+                                    <td>
+                                        <span class="img-price-full">28.599.000đ</span>
+                                        <span class="hover-vat">
+                                            [Đã bao gồm VAT]
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>- Giá thấp nhất:</td>
+                                    <td id="minPrice-59057" class="p-extend-minprice-text">28.599.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td>- Bảo hành:</td>
+                                    <td>24 Tháng (Pin 12 Tháng)</td>
+                                </tr>
+                                <tr>
+                                    <td>- Kho hàng:</td>
+                                    <td>Liên hệ</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                    <span class="tooltip-title">
-                        Thông số sản phẩm
-                    </span>
-                    <div class="hover-offer ">
-                        - CPU: Intel Core i7 11370H
-                        <br>
+                        <span class="tooltip-title">
+                            Thông số sản phẩm
+                        </span>
+                        <div class="hover-offer ">
+                            - CPU: Intel Core i7 11370H
+                            <br>
 
-                        - RAM: 8GB
-                        <br>
+                            - RAM: 8GB
+                            <br>
 
-                        - Ổ cứng: 512GB SSD
-                        <br>
+                            - Ổ cứng: 512GB SSD
+                            <br>
 
-                        - VGA: NVIDIA RTX 3050Ti 4GB
-                        <br>
+                            - VGA: NVIDIA RTX 3050Ti 4GB
+                            <br>
 
-                        - Màn hình: 15.6 inch FHD 144hz
-                        <br>
+                            - Màn hình: 15.6 inch FHD 144hz
+                            <br>
 
-                    </div>
-                </div>`;
-                $('#show-product-info').html(html);
-                $('#show-product-info').show();
-                // console.log("showProductInfo");
+                        </div>
+                    </div>`;
+                    $('#show-product-info').html(html);
+                    $('#show-product-info').show();
+                    // console.log("showProductInfo");
+                }
+
             },
             hideProductInfo: function() {
                 // $('#show-product-info').html();

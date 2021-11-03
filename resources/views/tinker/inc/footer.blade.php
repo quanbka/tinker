@@ -86,4 +86,3 @@
 <script charset="utf-8" src="/themes/tinker/assets/js/jquery-3.6.0.min.js?v={{ config('app.version') }}"></script>
 {{-- <script charset="utf-8" src="/themes/tinker/assets/js/swiper.js?v={{ config('app.version') }}"></script> --}}
 <script charset="utf-8" src="/themes/tinker/assets/js/script.js?v={{ config('app.version') }}"></script>
-<script src="{{ asset('js/app.js') }}"></script>

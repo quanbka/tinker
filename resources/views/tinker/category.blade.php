@@ -24,7 +24,7 @@
         <h1 class="main-heading">
             {{ $category->title }}
         </h1>
-
+        @desktop
         <div class="category-banner">
             <div class="swiper-wrapper">
                 @for($i=1; $i < 6; $i++)
@@ -42,6 +42,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
         </div>
+        @enddesktop
         <!-- content -->
         <main class="category-content-wrapper flex-b flex-w">
             <aside class="category-sidebar">

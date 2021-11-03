@@ -23,4 +23,13 @@
     <link rel="stylesheet" href="/themes/tinker/assets/css/layout.css?v={{ config('app.version') }}">
     {{-- <link rel="stylesheet" href="/themes/tinker/assets/css/swiper.css?v={{ config('app.version') }}"> --}}
     <link rel="stylesheet" href="/themes/tinker/assets/css/symbol.css?v={{ config('app.version') }}">
+    @mobile
+        <script type="text/javascript">
+            var is_mobile = true;
+        </script>
+    @elsemobile
+        <script type="text/javascript">
+            var is_mobile = false;
+        </script>
+    @endmobile
     {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}

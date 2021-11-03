@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Riverskies\Laravel\MobileDetect\MobileDetectServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
 
 
@@ -236,6 +237,8 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Theme' => Igaster\LaravelTheme\Facades\Theme::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'MobileDetect' => Riverskies\Laravel\MobileDetect\Facades\MobileDetect::class,
+
 
 
 
